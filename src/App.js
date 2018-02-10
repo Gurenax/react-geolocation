@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
+import './bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css'
 import './App.css'
 
 class App extends Component {
   state = {
-    location: {
-      longitude: null,
-      latitude: null,
-      accuracy: null
-    },
+    location: null,
     error: null
   }
 
@@ -35,32 +32,34 @@ class App extends Component {
       const errorMessage = `ERROR(${err.code}): ${err.message}`
 
       this.setState({
-        location: {
-          latitude: null,
-          longitude: null,
-          accuracy: null
-        },
+        location: null,
         error: errorMessage
       })
     }
 
     navigator.geolocation.getCurrentPosition(success, error, options)
-    
   }
 
   render() {
     const { location, error } = this.state
     return (
       <div className="App">
-        <h1>React Geolocation</h1>
-        <button onClick={this.handleGetLocation.bind(this)}>Get Location</button>
-        {!!location && (
-          <div>
-            <div>Latitude: {location.latitude}</div>
-            <div>Longitude: {location.longitude}</div>
-            <div>Accuracy: {location.accuracy}</div>
+        <div className="container-fluid">
+          <h1>React Geolocation</h1>
+          <button className="btn btn-primary mt-3" onClick={this.handleGetLocation.bind(this)}>
+            Get Location
+          </button>
+          <div className="mt-3">
+          {!!location && !error ? (
+            <div>
+              <div>Latitude: {location.latitude}</div>
+              <div>Longitude: {location.longitude}</div>
+              <div>Accuracy: {location.accuracy}</div>
+            </div>
+          ) : <div>{error}</div>
+          }
           </div>
-        )}
+        </div>
       </div>
     )
   }
