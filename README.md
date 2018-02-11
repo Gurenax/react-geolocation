@@ -1,8 +1,8 @@
 # React Geolocation Components using Geolocation API
 
 ## Components
-- Location Details (done)
-- Location Map (todo)
+- Location Details
+- Location Map
 
 ## Reference
 - [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)
