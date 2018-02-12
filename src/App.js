@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LocationDetails from './components/LocationDetails'
 import LocationMap from './components/LocationMap'
+import StreetView from './components/StreetView'
 import './bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css'
 import './App.css'
 
@@ -57,6 +58,9 @@ class App extends Component {
               <LocationDetails location={location} />
               <div className="mt-3">
                 <LocationMap location={location} />
+              </div>
+              <div className="mt-3">
+                <StreetView location={location} />
               </div>
             </div>
           ) : <div>{error}</div>
