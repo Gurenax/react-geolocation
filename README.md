@@ -3,6 +3,7 @@
 ## Components
 - Location Details
 - Location Map
+- Street View
 
 ## Reference
 - [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)
