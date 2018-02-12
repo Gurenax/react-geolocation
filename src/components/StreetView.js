@@ -2,6 +2,7 @@ import React from 'react'
 
 const StreetView = ({ location }) => (
   <iframe
+    title="StreetView"
     width="600"
     height="450"
     frameBorder="0"

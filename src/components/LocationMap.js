@@ -2,7 +2,7 @@ import React from 'react'
 
 const LocationMap = ({ location }) => (
   <iframe
-    title="locationMap"
+    title="LocationMap"
     width="600"
     height="450"
     frameBorder="0"
