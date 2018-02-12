@@ -52,7 +52,7 @@ class App extends Component {
           <button className="btn btn-primary mt-3" onClick={this.handleGetLocation.bind(this)}>
             Get Location
           </button>
-          <div className="mt-3">
+          <div className="mt-3 max-width-600 mx-auto">
           {!!location && !error ? (
             <div>
               <LocationDetails location={location} />
